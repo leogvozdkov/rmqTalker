@@ -7,8 +7,8 @@ def callback(ch, method, properties, body):
 
 
 def read(name):
-    credential = pika.PlainCredentials('leo', '28944982')
-    connection = pika.BlockingConnection(pika.ConnectionParameters('192.168.88.17', 5672, '/', credential))
+    credential = pika.PlainCredentials('admin', 'xxxxxxx')
+    connection = pika.BlockingConnection(pika.ConnectionParameters('1.1.1.1', 5672, '/', credential))
     channel = connection.channel()
     queue_name = 'queue #%s' % name
     channel.basic_consume(on_message_callback=callback,
