@@ -11,8 +11,8 @@ def random_string_digits(string_length=10):
 
 
 def flood(name):
-    credential = pika.PlainCredentials('leo', '28944982')
-    connection = pika.BlockingConnection(pika.ConnectionParameters('192.168.88.17', 5672, '/', credential))
+    credential = pika.PlainCredentials('admin', 'xxxxxxxx')
+    connection = pika.BlockingConnection(pika.ConnectionParameters('1.1.1.1', 5672, '/', credential))
     channel = connection.channel()
     queue_name = 'queue #%s' % name
     while True:
