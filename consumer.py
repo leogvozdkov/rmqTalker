@@ -32,5 +32,9 @@ def create_threads():
         my_thread.start()
 
 
+def empty_func():
+    pass
+
+
 if __name__ == "__main__":
     create_threads()
