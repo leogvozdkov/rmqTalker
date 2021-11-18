@@ -30,6 +30,9 @@ def create_threads():
     for i in range(100):
         my_thread = MyThread(i)
         my_thread.start()
+        
+def func():
+    pass
 
 
 def empty_func():
